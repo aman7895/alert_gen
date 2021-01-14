@@ -23,7 +23,6 @@ def test_cannot_create_instance_of_alert_manager():
 
 
 def test_multi_thread_input():
-    print("third")
     messages = ['message1', 'message2', 'message1']
     lock = Lock()
     x = 0
@@ -47,5 +46,3 @@ def test_multi_thread_input():
         t.join()
     print(x)
     assert x == 16
-
-test_multi_thread_input()
